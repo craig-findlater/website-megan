@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Megan Findlater offers warm, nurturing home-based childcare in Invercargill, NZ, operating under the Tiny Nation network." />
+  <meta name="description" content="Megan Findlater offers warm, play-based home-based childcare in Invercargill, NZ, operating under the Tiny Nation network. Mon–Fri, 8am–5:30pm. Spaces available." />
 
   <title>Megan Findlater — Home-Based Childcare · Invercargill</title>
 
@@ -15,39 +15,541 @@
     rel="stylesheet"
   />
 
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
   <!-- ===================== NAV ===================== -->
-  <!-- Navigation bar: logo/name on left, links on right (mobile hamburger) -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__brand" aria-label="Megan Findlater – home">
+        Megan Findlater
+      </a>
+      <button
+        class="nav__hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">What I Offer</a></li>
+        <li><a href="#environment" class="nav__link">Environment</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- ===================== HERO ===================== -->
-  <!-- Full-width hero: warm background image/colour, headline, sub-headline, CTA button -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge-row">
+          <span class="badge badge--teal">Tiny Nation Network</span>
+        </div>
+        <h1 class="hero__name">Megan<br />Findlater</h1>
+        <p class="hero__tagline">Warm, play-based home childcare<br />in Invercargill.</p>
+        <div class="hero__availability">
+          <svg class="hero__icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Fri, 8am–5:30pm</span>
+          <span class="hero__sep" aria-hidden="true">·</span>
+          <span class="hero__spaces">Spaces available</span>
+        </div>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn--coral">Get in Touch</a>
+          <a href="#about" class="btn btn--outline">Learn More</a>
+        </div>
+      </div>
+      <div class="hero__image-wrap">
+        <!-- PHOTO: replace with actual image of Megan -->
+        <div class="photo-placeholder photo-placeholder--portrait photo-placeholder--warm" aria-label="Photo placeholder">
+          <span>Your photo here</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#FFF9F0"/>
+      </svg>
+    </div>
+  </section>
 
   <!-- ===================== ABOUT ===================== -->
-  <!-- Short bio of Megan, photo, warm/personal tone, mention of Tiny Nation -->
+  <section class="about section-pad fade-up" id="about" aria-labelledby="about-heading">
+    <div class="container about__inner">
+      <div class="about__images">
+        <!-- PHOTO: replace with a warm photo of Megan with children -->
+        <div class="photo-placeholder photo-placeholder--wide photo-placeholder--green" aria-label="Photo placeholder">
+          <span>Megan with tamariki</span>
+        </div>
+        <div class="about__images-row">
+          <!-- PHOTO: replace with a photo of outdoor play -->
+          <div class="photo-placeholder photo-placeholder--square photo-placeholder--blue" aria-label="Photo placeholder">
+            <span>Outdoor play</span>
+          </div>
+          <!-- PHOTO: replace with a photo of the playroom -->
+          <div class="photo-placeholder photo-placeholder--square photo-placeholder--yellow" aria-label="Photo placeholder">
+            <span>Playroom</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__content">
+        <p class="section-label">About Megan</p>
+        <h2 id="about-heading">A familiar face, a warm home, a love of learning</h2>
+        <p>
+          I'm Megan — a mum of two and a home-based educator with three years of experience
+          caring for tamariki in Invercargill. Before stepping into childcare, I spent years as
+          a Children's Librarian at both Invercargill and Christchurch City Libraries, so books,
+          stories and curious little minds have always been at the heart of what I do.
+        </p>
+        <p>
+          I operate under the <strong>Tiny Nation</strong> network, which means I receive
+          ongoing professional support and work within a framework that keeps your child's
+          wellbeing and learning at the centre of everything.
+        </p>
+        <div class="about__callouts" role="list">
+          <div class="callout" role="listitem">
+            <span class="callout__icon" aria-hidden="true">🎓</span>
+            <div>
+              <strong>Qualified Educator</strong>
+              <span>National Certificate in Early Childhood Education &amp; Care (Level 4)</span>
+            </div>
+          </div>
+          <div class="callout" role="listitem">
+            <span class="callout__icon" aria-hidden="true">🩺</span>
+            <div>
+              <strong>First Aid Certified</strong>
+              <span>Current comprehensive first aid certificate</span>
+            </div>
+          </div>
+          <div class="callout" role="listitem">
+            <span class="callout__icon" aria-hidden="true">📚</span>
+            <div>
+              <strong>Librarian Background</strong>
+              <span>Former Children's Librarian — stories and curiosity run deep</span>
+            </div>
+          </div>
+          <div class="callout" role="listitem">
+            <span class="callout__icon" aria-hidden="true">❤️</span>
+            <div>
+              <strong>Mum of Two</strong>
+              <span>I understand firsthand what matters to families</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== SERVICES ===================== -->
-  <!-- Cards or list: ages catered for, hours, what's included (meals, learning, outdoor play) -->
+  <section class="services section-pad fade-up" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <p class="section-label section-label--center">What I Offer</p>
+      <h2 id="services-heading" class="section-heading--center">Every day is an adventure</h2>
+      <p class="section-intro">
+        From creative play to community outings, each day is thoughtfully shaped around the
+        children in my care — their curiosity, energy and growing confidence.
+      </p>
+
+      <div class="services__grid" role="list">
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">🧩</div>
+          <h3>Play-Based Learning</h3>
+          <p>Structured and free play that sparks curiosity and builds skills through joyful exploration.</p>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">🌿</div>
+          <h3>Outdoor Adventures</h3>
+          <p>Daily outdoor time in our large sheltered backyard with sandpit, fort and trampoline.</p>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">🤝</div>
+          <h3>Playcentre Sessions</h3>
+          <p>Tamariki join our local Playcentre, building friendships and social confidence.</p>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">🗺️</div>
+          <h3>Community Outings</h3>
+          <p>Regular trips to Queens Park, Thompsons Bush, and Riverton in summer.</p>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">👶</div>
+          <h3>All Ages Welcome</h3>
+          <p>Spaces for children both under and over 2 years old. Get in touch to discuss your needs.</p>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-card__icon" aria-hidden="true">🏡</div>
+          <h3>Safe, Nurturing Environment</h3>
+          <p>A purposefully resourced home where every child feels safe, seen and celebrated.</p>
+        </article>
+      </div>
+
+      <!-- Availability banner -->
+      <div class="availability-banner" role="complementary" aria-label="Availability">
+        <div class="availability-banner__inner">
+          <div class="availability-banner__item">
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span><strong>Monday – Friday</strong></span>
+          </div>
+          <div class="availability-banner__item">
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span><strong>8:00am – 5:30pm</strong></span>
+          </div>
+          <div class="availability-banner__item">
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span><strong>Spaces available now</strong></span>
+          </div>
+          <a href="#contact" class="btn btn--white">Enquire Today</a>
+        </div>
+      </div>
+
+      <!-- Tiny Nation strip -->
+      <div class="tiny-nation-strip" role="complementary" aria-label="Tiny Nation network information">
+        <div class="tiny-nation-strip__inner">
+          <div class="tiny-nation-strip__badge" aria-hidden="true">TN</div>
+          <div class="tiny-nation-strip__text">
+            <strong>Proud member of the Tiny Nation network</strong>
+            <span>Tiny Nation connects families with quality home-based educators across New Zealand, providing ongoing support and professional oversight.</span>
+          </div>
+          <a
+            href="https://tinynation.co.nz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--teal-outline"
+            aria-label="Visit Tiny Nation website (opens in new tab)"
+          >Visit Tiny Nation</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== ENVIRONMENT ===================== -->
-  <!-- Description / photo gallery of the home environment, outdoor space, resources -->
+  <section class="environment section-pad fade-up" id="environment" aria-labelledby="environment-heading">
+    <div class="container environment__inner">
+      <div class="environment__content">
+        <p class="section-label">The Environment</p>
+        <h2 id="environment-heading">Space to roam, explore and grow</h2>
+        <p>
+          Our home is set up with children's learning in mind — a dedicated playroom packed
+          with resources sits alongside a large, sheltered back section where the real
+          adventures happen. There's always something to discover.
+        </p>
+        <ul class="environment__features" role="list">
+          <li>Dedicated playroom with a wide range of resources and materials</li>
+          <li>Large sheltered back section for outdoor play in all weathers</li>
+          <li>Sandpit, climbing fort, and trampoline in the backyard</li>
+          <li>Regular Playcentre sessions for social connection</li>
+        </ul>
+        <p>
+          We love getting out into our community too — you'll regularly find us exploring
+          Invercargill's beautiful green spaces and beyond.
+        </p>
+        <div class="place-tags" role="list" aria-label="Places we visit">
+          <span class="place-tag" role="listitem">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Queens Park
+          </span>
+          <span class="place-tag" role="listitem">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Thompsons Bush
+          </span>
+          <span class="place-tag" role="listitem">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Riverton (summer)
+          </span>
+          <span class="place-tag" role="listitem">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Local Playcentre
+          </span>
+        </div>
+      </div>
+      <div class="environment__photos">
+        <!-- PHOTO: replace with a photo of the backyard / outdoor space -->
+        <div class="photo-placeholder photo-placeholder--env-tall photo-placeholder--green" aria-label="Photo placeholder">
+          <span>Backyard &amp; outdoor space</span>
+        </div>
+        <div class="environment__photos-stack">
+          <!-- PHOTO: replace with a photo of the playroom -->
+          <div class="photo-placeholder photo-placeholder--env-small photo-placeholder--yellow" aria-label="Photo placeholder">
+            <span>Playroom resources</span>
+          </div>
+          <!-- PHOTO: replace with a photo of Playcentre or community outing -->
+          <div class="photo-placeholder photo-placeholder--env-small photo-placeholder--blue" aria-label="Photo placeholder">
+            <span>Playcentre session</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== PHILOSOPHY ===================== -->
-  <!-- Megan's childcare philosophy, values, approach to learning & development -->
+  <section class="philosophy section-pad fade-up" id="philosophy" aria-labelledby="philosophy-heading">
+    <div class="container philosophy__inner">
+      <p class="section-label section-label--center">My Philosophy</p>
+      <blockquote class="philosophy__quote">
+        <p>"Learning through play creates quicker brain connections than learning in isolation — so we follow the child's lead, always."</p>
+      </blockquote>
+      <p id="philosophy-heading" class="philosophy__subtext">
+        I'm a strong believer in child-led learning. I follow and expand on the interests shown
+        by each tamariki in my care, trusting that when a child is genuinely engaged, real
+        learning happens naturally.
+      </p>
+      <div class="philosophy__pillars" role="list">
+        <div class="pillar" role="listitem">
+          <div class="pillar__icon" aria-hidden="true">🧭</div>
+          <h3>Child-Led Learning</h3>
+          <p>Every child has unique interests and passions. I follow their curiosity and build rich learning experiences around what matters to them.</p>
+        </div>
+        <div class="pillar" role="listitem">
+          <div class="pillar__icon" aria-hidden="true">🎨</div>
+          <h3>Learning Through Play</h3>
+          <p>Play is the most powerful tool a child has. It builds brain connections, social skills, creativity and resilience all at once.</p>
+        </div>
+        <div class="pillar" role="listitem">
+          <div class="pillar__icon" aria-hidden="true">🌱</div>
+          <h3>Community &amp; Socialisation</h3>
+          <p>Through Playcentre, community outings and shared experiences, tamariki build the confidence to engage with the wider world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== TESTIMONIALS ===================== -->
-  <!-- One or two parent testimonial quotes, stars optional -->
+  <section class="testimonial section-pad fade-up" id="testimonial" aria-labelledby="testimonial-heading">
+    <div class="container">
+      <p class="section-label section-label--center" id="testimonial-heading">Kind Words</p>
+      <div class="testimonial__card" role="figure" aria-label="Parent testimonial">
+        <div class="testimonial__stars" aria-label="5 stars">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <blockquote class="testimonial__quote">
+          <p>"Thank you for being our daughter's 2nd mama and for really feeding her love of the
+          outdoors. She has developed so much in the past 6 months and I credit that entirely
+          to you. I'm so glad she got to have you as a carer, despite it being only a short while."</p>
+        </blockquote>
+        <footer class="testimonial__attribution">
+          <div class="testimonial__avatar" aria-hidden="true">TN</div>
+          <div>
+            <strong>Tiny Nation Family</strong>
+            <span>Invercargill</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== GALLERY ===================== -->
-  <!-- Responsive photo grid — images served from /images/ -->
+  <section class="gallery section-pad fade-up" id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <p class="section-label section-label--center">Life at Megan's</p>
+      <h2 id="gallery-heading" class="section-heading--center">A glimpse into our days</h2>
+      <div class="gallery__grid" role="list" aria-label="Photo gallery">
+        <!-- PHOTO: replace with actual photo of outdoor play -->
+        <div class="gallery__item gallery__item--tall photo-placeholder photo-placeholder--green" role="listitem" aria-label="Photo placeholder">
+          <span>Outdoor play</span>
+        </div>
+        <!-- PHOTO: replace with actual photo of the playroom -->
+        <div class="gallery__item photo-placeholder photo-placeholder--yellow" role="listitem" aria-label="Photo placeholder">
+          <span>Playroom</span>
+        </div>
+        <!-- PHOTO: replace with actual photo of a community outing -->
+        <div class="gallery__item photo-placeholder photo-placeholder--blue" role="listitem" aria-label="Photo placeholder">
+          <span>Community outing</span>
+        </div>
+        <!-- PHOTO: replace with actual photo of art / craft activities -->
+        <div class="gallery__item gallery__item--wide photo-placeholder photo-placeholder--coral" role="listitem" aria-label="Photo placeholder">
+          <span>Creative &amp; art play</span>
+        </div>
+        <!-- PHOTO: replace with actual photo of Playcentre session -->
+        <div class="gallery__item photo-placeholder photo-placeholder--warm" role="listitem" aria-label="Photo placeholder">
+          <span>Playcentre session</span>
+        </div>
+        <!-- PHOTO: replace with actual photo of sandpit / fort play -->
+        <div class="gallery__item photo-placeholder photo-placeholder--teal" role="listitem" aria-label="Photo placeholder">
+          <span>Sandpit &amp; fort adventures</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== CONTACT FORM ===================== -->
-  <!-- Name, email, message fields + submit button; wired to EmailJS in Phase 2 -->
+  <section class="contact section-pad fade-up" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <p class="section-label">Get in Touch</p>
+        <h2 id="contact-heading">Ready to find out more?</h2>
+        <p>
+          I'd love to hear from you. Whether you have questions about availability, my approach,
+          or just want to have a chat — fill in the form and I'll get back to you as soon as I can.
+        </p>
+        <ul class="contact__details" role="list">
+          <li>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Invercargill, Southland, New Zealand
+          </li>
+          <li>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Monday – Friday, 8:00am – 5:30pm
+          </li>
+          <li>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Spaces available for under and over 2s
+          </li>
+        </ul>
+        <div class="contact__network">
+          <div class="tiny-nation-mini">
+            <div class="tiny-nation-mini__badge" aria-hidden="true">TN</div>
+            <div>
+              <strong>Tiny Nation Network</strong>
+              <a href="https://tinynation.co.nz" target="_blank" rel="noopener noreferrer">tinynation.co.nz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form-wrap">
+        <form
+          class="contact-form"
+          id="contactForm"
+          novalidate
+          aria-label="Enquiry form"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span aria-hidden="true" class="required">*</span></label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                autocomplete="name"
+                required
+                placeholder="Jane Smith"
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span aria-hidden="true" class="required">*</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                required
+                placeholder="021 000 0000"
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="childName">Child's Name <span aria-hidden="true" class="required">*</span></label>
+              <input
+                type="text"
+                id="childName"
+                name="childName"
+                required
+                placeholder="First name"
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="childDob">Child's Date of Birth <span aria-hidden="true" class="required">*</span></label>
+              <input
+                type="date"
+                id="childDob"
+                name="childDob"
+                required
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <fieldset class="form-group form-group--full">
+            <legend>Days Required <span aria-hidden="true" class="required">*</span></legend>
+            <div class="days-grid" role="list">
+              <label class="day-checkbox" role="listitem">
+                <input type="checkbox" name="days" value="Monday" />
+                <span>Mon</span>
+              </label>
+              <label class="day-checkbox" role="listitem">
+                <input type="checkbox" name="days" value="Tuesday" />
+                <span>Tue</span>
+              </label>
+              <label class="day-checkbox" role="listitem">
+                <input type="checkbox" name="days" value="Wednesday" />
+                <span>Wed</span>
+              </label>
+              <label class="day-checkbox" role="listitem">
+                <input type="checkbox" name="days" value="Thursday" />
+                <span>Thu</span>
+              </label>
+              <label class="day-checkbox" role="listitem">
+                <input type="checkbox" name="days" value="Friday" />
+                <span>Fri</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-group form-group--full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell me a little about your child and any questions you have…"
+            ></textarea>
+          </div>
+
+          <!-- Hidden field for recipient — TODO: replace with actual email in EmailJS template -->
+          <input type="hidden" name="to_email" value="EMAIL_ADDRESS_HERE" />
+
+          <button type="submit" class="btn btn--coral btn--full" id="submitBtn">
+            <span class="btn__label">Send Enquiry</span>
+            <span class="btn__loading" aria-hidden="true" hidden>Sending…</span>
+          </button>
+
+          <!-- Form status messages -->
+          <div class="form-status form-status--success" id="formSuccess" role="alert" aria-live="polite" hidden>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Thanks! Your message has been sent. I'll be in touch soon.
+          </div>
+          <div class="form-status form-status--error" id="formError" role="alert" aria-live="polite" hidden>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Something went wrong. Please try again or contact me directly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <!-- Copyright, Tiny Nation logo/link, social links if any -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__name">Megan Findlater</span>
+        <span class="footer__tagline">Warm, play-based home childcare · Invercargill</span>
+      </div>
+      <div class="footer__network">
+        <span>Operating under the</span>
+        <a
+          href="https://tinynation.co.nz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__tn-link"
+          aria-label="Tiny Nation network (opens in new tab)"
+        >Tiny Nation</a>
+        <span>network</span>
+      </div>
+      <div class="footer__copy">
+        <small>&copy; 2025 Megan Findlater. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
